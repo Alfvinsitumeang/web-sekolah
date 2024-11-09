@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Fakultas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .faculty-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px 30px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2e56b7;
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f4ff;
+            border-left: 4px solid #2e56b7;
+            border-radius: 5px;
+            position: relative;
+            font-size: 1.1em;
+        }
+
+        /* Sub-jurusan dan jurusan dalam list */
+        .nested-list {
+            padding-left: 20px;
+            font-size: 0.95em;
+        }
+
+        /* Simbol untuk jurusan utama */
+        li::before {
+            content: "■ ";
+            color: #2e56b7;
+            font-weight: bold;
+            position: absolute;
+            left: -20px;
+        }
+
+        /* Simbol untuk sub-jurusan */
+        .nested-list li::before {
+            content: "○ ";
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="faculty-container">
+    <h1>Daftar Fakultas <p> Universitas Methodist Indonesia</p></h1>
+    <ul>
+        <li>Fakultas Sastra
+            <ul class="nested-list">
+                <li>Sastra Inggris</li>
+            </ul>
+        </li>
+        <li>Fakultas Ekonomi
+            <ul class="nested-list">
+                <li>Akuntansi
+                    <ul class="nested-list">
+                        <li>Akuntansi Perpajakan</li>
+                        <li>Perbankan</li>
+                    </ul>
+                </li>
+                <li>Manajemen</li>
+                <li>Komputerisasi Akuntansi</li>
+                <li>Manajemen Informatika</li>
+            </ul>
+        </li>
+        <li>Fakultas Kedokteran
+            <ul class="nested-list">
+                <li>Profesi Dokter</li>
+            </ul>
+        </li>
+        <li>Fakultas Pertanian
+            <ul class="nested-list">
+                <li>Agroteknologi</li>
+                <li>Agribisnis</li>
+            </ul>
+        </li>
+        <li>Fakultas Komputer
+            <ul class="nested-list">
+                <li>Teknik Informatika</li>
+                <li>Sistem Informasi</li>
+                <li>Pendidikan Teknologi Informasi</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

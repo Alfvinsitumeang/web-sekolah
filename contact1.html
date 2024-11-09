@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Universitas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+
+        .contact-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .phone-number {
+            color: #2e56b7;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .subtext {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e6f0ff;
+            color: #2e56b7;
+            border: 1px solid #bdd4ff;
+            border-radius: 8px;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: #d0e4ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-card">
+    <div class="phone-number">(061) 4157882</div>
+    <div class="subtext">Universitas Methodist Indonesia, Nomor Telepon Utama</div>
+    
+    <div class="button-container">
+        <a href="tel:+62614157882" class="button">Telepon</a>
+        <a href="https://www.google.com/maps/dir//Universitas+Methodist+Indonesia" target="_blank" class="button">Rute</a>
+        <a href="#" class="button" onclick="copyToClipboard()">Salin</a>
+    </div>
+</div>
+
+<script>
+    function copyToClipboard() {
+        const text = "(061) 4157882";
+        navigator.clipboard.writeText(text).then(() => {
+            alert("Nomor telepon disalin ke clipboard!");
+        });
+    }
+</script>
+
+</body>
+</html>
